@@ -6,8 +6,7 @@ namespace EmployeesApp.Infrastructure.Persistance.Repositories
 {
     public class EmployeeRepository(ApplicationContext context) : IEmployeeRepository
     {
-
-
+     
         public void Add(Employee employee)
         {
             context.Employees.Add(employee);

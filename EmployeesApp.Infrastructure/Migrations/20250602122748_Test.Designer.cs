@@ -3,6 +3,7 @@ using EmployeesApp.Infrastructure.Persistance;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmployeesApp.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20250602122748_Test")]
+    partial class Test
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,7 +41,7 @@ namespace EmployeesApp.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Salary")
-                        .HasColumnType("Money");
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 
@@ -50,35 +53,35 @@ namespace EmployeesApp.Infrastructure.Migrations
                             Id = 562,
                             Email = "Anders.Hejlsberg@outlook.com",
                             Name = "Anders Hejlsberg",
-                            Salary = 30000m
+                            Salary = 0m
                         },
                         new
                         {
                             Id = 62,
                             Email = "k.d@outlook.com",
                             Name = "Kathleen Dollard",
-                            Salary = 32000m
+                            Salary = 0m
                         },
                         new
                         {
                             Id = 15662,
                             Email = "Admin.Torgersen@outlook.com",
                             Name = "Mads Torgersen",
-                            Salary = 40000m
+                            Salary = 0m
                         },
                         new
                         {
                             Id = 52,
                             Email = "s.h@outlook.com",
                             Name = "Scott Hanselman",
-                            Salary = 50000m
+                            Salary = 0m
                         },
                         new
                         {
                             Id = 563,
                             Email = "j.s@outlook.com",
                             Name = "Jon Skeet",
-                            Salary = 60000m
+                            Salary = 0m
                         });
                 });
 #pragma warning restore 612, 618
