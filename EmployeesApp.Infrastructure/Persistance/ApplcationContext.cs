@@ -58,7 +58,7 @@ namespace EmployeesApp.Infrastructure.Persistance
                     Id = 563,
                     Name = "Jon Skeet",
                     Email = "j.s@outlook.com",
-                    Salary = 60000
+                    Salary = 600500
                 }
             );
 

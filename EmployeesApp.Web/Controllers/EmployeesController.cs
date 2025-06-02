@@ -61,6 +61,7 @@ public class EmployeesController(IEmployeeService service) : Controller
             Id = model!.Id,
             Name = model.Name,
             Email = model.Email,
+            Salary = Math.Round(model.Salary,2)
         };
 
         return View(viewModel);
